@@ -28,30 +28,30 @@ function getReceipt() {
     console.log("size text1: "+text1);
     console.log("subtotal: $"+runningTotal+".00");
     //these variables will be passed on in each function
-    getMeat(runningTotal,text1);
+    getTop(runningTotal,text1);
 };
 
-function getMeat(runningTotal,text1) {
-    var meatTotal = 0;
-    var selectedMeat = [];
-    var meatArray = document.getElementsByClassName("meats");
-    for (var j = 0 ; j < meatArray.length; j++) {
-        if (meatArray[j].checked) {
-            selectedMeat.push(meatArray[j].value);
-            console.log("selected meat item: ("+meatArray[j].value+")");
-            text1 = text1+meatArray[j].value+"<br>";
+function getTop(runningTotal,text1) {
+    var topTotal = 0;
+    var selectedTop = [];
+    var topArray = document.getElementsByClassName("tops");
+    for (var j = 0 ; j < topArray.length; j++) {
+        if (topArray[j].checked) {
+            selectedTop.push(topArray[j].value);
+            console.log("selected toppings item: ("+topArray[j].value+")");
+            text1 = text1+topArray[j].value+"<br>";
         }
     }
-    var meatCount = selectedMeat.length;
-    if (meatCount > 1) {
-        meatTotal = (meatCount-1);
+    var topCount = selectedTop.length;
+    if (topCount > 1) {
+        topTotal = (topCount-1);
     } else {
-        meatTotal = 0;
+        topTotal = 0;
     }
-    runningTotal = (runningTotal+meatTotal);
-    console.log("total selected meat items: "+meatCount);
-    console.log(meatCount+" meat -1 free meat = "+"$"+meatTotal+".00");
-    console.log("meat text1: "+text1);
+    runningTotal = (runningTotal+topTotal);
+    console.log("total selected topping items: "+topCount);
+    console.log(topCount+" meat -1 free meat = "+"$"+topTotal+".00");
+    console.log("toppings text1: "+text1);
     console.log("Purchase Total: "+"$"+runningTotal+".00");
     document.getElementById("showText").innerHTML=text1;
     document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";

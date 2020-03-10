@@ -5,6 +5,7 @@ body {
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:#00ff00;
+    text-align:center;
 }
 h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,7 +13,7 @@ h3 {
 }
 div {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:#0000ff;
+    color:#1b4e1e;
 }
 #menuBG {
     width:400px;
@@ -20,13 +21,13 @@ div {
     margin:10px auto;
 }
 #frmMenu {
-    width:400px;
+    width:600px;
     height:200px;
 }
 #totalPrice {
     width:200px;
     height:190px;
-    margin:0 auto;
+    margin:20px auto;
     float:right;
 }
 .left {
@@ -34,9 +35,15 @@ div {
     height:200px;
     float:left;
 }
+.middle {
+    width:200px;
+    height:200px;
+    float:left;
+
+}
 .right {
     width:200px;
-    height:190px;
+    height:200px;
     float:right;
 }
 #showText {
@@ -56,4 +63,6 @@ div {
     margin:10px 0px 0px 100px;
     width: 100px;
     height:40px;
+    display: block;
+    margin: 25px auto;
 }
